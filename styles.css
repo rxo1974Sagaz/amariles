@@ -44,19 +44,12 @@ a:hover{text-decoration:underline}
   align-items:center;
   padding:18px 0;
 }
-.header .brand{
-  font-weight:700;
-  letter-spacing:.5px;
-}
-.header nav a{
-  margin-left:18px;
-  color:var(--muted);
-  transition:color .2s ease;
-}
-.header nav a:hover{ color:var(--fg); }
+.header .brand{font-weight:700;letter-spacing:.5px}
+.header nav a{margin-left:18px;color:var(--muted);transition:color .2s ease}
+.header nav a:hover{color:var(--fg)}
 
 /* ===========================
-   HERO — imagem e título
+   HERO — imagem, logo e título
    =========================== */
 .hero{
   position:relative;
@@ -83,14 +76,26 @@ a:hover{text-decoration:underline}
   text-align:center;
   padding:28px;
 }
+
+/* LOGO da capa */
+.hero-logo{
+  width:260px;                 /* ajuste fino do tamanho do logo */
+  max-width:60%;
+  margin:0 auto 18px;
+  display:block;
+  object-fit:contain;
+  filter:drop-shadow(0 6px 12px rgba(0,0,0,.35));
+}
+
+/* Título e subtítulo */
 .title{
-  color:#fff;                 /* antes: #000 — agora branco puro */
+  color:#fff;                  /* branco no título */
   font-size:clamp(28px,5vw,44px);
   margin:0 0 12px;
   font-weight:800;
 }
 .subtitle{
-  color:#000;                 /* preto no hero */
+  color:#000;                  /* preto no subtítulo */
   font-size:clamp(14px,2.6vw,18px);
   max-width:740px;
   margin:0 auto;
@@ -110,21 +115,11 @@ a:hover{text-decoration:underline}
 /* ===========================
    Seções e cartões
    =========================== */
-.section{
-  padding:44px 0;
-  border-top:1px solid #161b27;
-}
-.h1{
-  font-size:22px;
-  margin:0 0 18px;
-}
-.muted{ color:var(--muted); }
+.section{padding:44px 0;border-top:1px solid #161b27}
+.h1{font-size:22px;margin:0 0 18px}
+.muted{color:var(--muted)}
 
-.grid{
-  display:grid;
-  grid-template-columns:repeat(12,1fr);
-  gap:18px;
-}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
 
 .card{
   background:var(--card);
@@ -134,10 +129,7 @@ a:hover{text-decoration:underline}
   box-shadow:0 6px 16px rgba(0,0,0,.25);
   transition:transform .2s ease, box-shadow .2s ease;
 }
-.card:hover{
-  transform:translateY(-3px);
-  box-shadow:0 10px 22px rgba(0,0,0,.35);
-}
+.card:hover{transform:translateY(-3px);box-shadow:0 10px 22px rgba(0,0,0,.35)}
 
 ul{margin:0;padding-left:18px}
 li{margin-bottom:6px}
@@ -157,8 +149,9 @@ footer{
    Responsividade
    =========================== */
 @media (max-width:520px){
-  .hero::before{ background-position:var(--hero-x) var(--hero-y); }
-  .grid{ grid-template-columns:1fr; }
-  .header nav{ display:none; }
-  .title{ font-size:clamp(24px,6vw,36px); }
+  .hero::before{background-position:var(--hero-x) var(--hero-y)}
+  .grid{grid-template-columns:1fr}
+  .header nav{display:none}
+  .title{font-size:clamp(24px,6vw,36px)}
+  .hero-logo{width:210px;max-width:72%}
 }
