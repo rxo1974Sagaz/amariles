@@ -1,4 +1,4 @@
-/* RXO dark theme baseline — Amariles site */
+/* RXO dark theme — Amariles */
 :root{
   --bg:#0b0d12;
   --fg:#e6e6e6;
@@ -16,37 +16,57 @@
 }
 
 *{box-sizing:border-box}
-html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans",sans-serif;line-height:1.55}
+html,body{
+  margin:0;padding:0;background:var(--bg);color:var(--fg);
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+  line-height:1.55
+}
 img{max-width:100%;display:block}
 a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline}
 .container{max-width:900px;margin:0 auto;padding:0 20px}
+
 .header{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
 .header .brand{font-weight:700;letter-spacing:.5px}
 .header nav a{margin-left:18px;color:var(--muted)}
 .header nav a:hover{color:var(--fg)}
 
-.hero{position:relative;height:var(--hero-height);display:grid;place-items:center;background:#000;overflow:hidden;border-bottom:1px solid #1a2030}
-.hero::before{content:"";position:absolute;inset:0;background:
-linear-gradient(to bottom, rgba(11,13,18,var(--overlay-top)), rgba(11,13,18,var(--overlay-bottom))),
-url('assets/amariles.jpg') center var(--hero-y) / var(--hero-size) no-repeat;filter:saturate(1);opacity:1}
+.hero{
+  position:relative;height:var(--hero-height);
+  display:grid;place-items:center;background:#000;overflow:hidden;
+  border-bottom:1px solid #1a2030
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background:
+    linear-gradient(to bottom, rgba(11,13,18,var(--overlay-top)), rgba(11,13,18,var(--overlay-bottom))),
+    url('https://rxo1974sagaz.github.io/amariles/assets/amariles.jpg?v=6') center var(--hero-y) / var(--hero-size) no-repeat;
+  filter:saturate(1);opacity:1
+}
 .hero-content{position:relative;z-index:1;text-align:center;padding:28px}
 .title{font-size:clamp(28px,5vw,44px);margin:0 0 12px;font-weight:800}
 .subtitle{color:var(--muted);font-size:clamp(14px,2.6vw,18px);max-width:740px;margin:0 auto}
-.badge{display:inline-block;background:rgba(255,209,102,.12);color:var(--accent);border:1px solid rgba(255,209,102,.35);padding:6px 10px;border-radius:999px;font-size:12px;margin-top:14px;backdrop-filter:blur(2px)}
+.badge{
+  display:inline-block;background:rgba(255,209,102,.12);color:var(--accent);
+  border:1px solid rgba(255,209,102,.35);padding:6px 10px;border-radius:999px;
+  font-size:12px;margin-top:14px;backdrop-filter:blur(2px)
+}
 
 .section{padding:44px 0;border-top:1px solid #161b27}
 .h1{font-size:22px;margin:0 0 18px}
 .muted{color:var(--muted)}
 .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
-.card{background:var(--card);border:1px solid #1a2030;border-radius:16px;padding:18px;box-shadow:0 6px 16px rgba(0,0,0,.25)}
-.post img, .post iframe{border-radius:12px}
+.card{
+  background:var(--card);border:1px solid #1a2030;border-radius:16px;padding:18px;
+  box-shadow:0 6px 16px rgba(0,0,0,.25)
+}
 blockquote{margin:0;padding:14px 16px;border-left:3px solid var(--accent);background:#0f131a;color:var(--muted);border-radius:6px}
+
 footer{padding:40px 0;border-top:1px solid #161b27;color:var(--muted)}
 
 /* Responsive */
 @media (max-width:520px){
-  .hero::before{background-position:var(--hero-x) var(--hero-y);}
+  .hero::before{background-position:var(--hero-x) var(--hero-y)}
   .grid{grid-template-columns:1fr}
   .header nav{display:none}
 }
