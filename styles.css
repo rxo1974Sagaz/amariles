@@ -53,9 +53,7 @@ a:hover{text-decoration:underline}
   color:var(--muted);
   transition:color .2s ease;
 }
-.header nav a:hover{
-  color:var(--fg);
-}
+.header nav a:hover{ color:var(--fg); }
 
 /* ===========================
    HERO — imagem e título
@@ -86,12 +84,13 @@ a:hover{text-decoration:underline}
   padding:28px;
 }
 .title{
+  color:#000;                 /* preto no hero */
   font-size:clamp(28px,5vw,44px);
   margin:0 0 12px;
   font-weight:800;
 }
 .subtitle{
-  color:var(--muted);
+  color:#000;                 /* preto no hero */
   font-size:clamp(14px,2.6vw,18px);
   max-width:740px;
   margin:0 auto;
@@ -119,7 +118,7 @@ a:hover{text-decoration:underline}
   font-size:22px;
   margin:0 0 18px;
 }
-.muted{color:var(--muted)}
+.muted{ color:var(--muted); }
 
 .grid{
   display:grid;
@@ -158,8 +157,8 @@ footer{
    Responsividade
    =========================== */
 @media (max-width:520px){
-  .hero::before{background-position:var(--hero-x) var(--hero-y);}
-  .grid{grid-template-columns:1fr;}
-  .header nav{display:none;}
-  .title{font-size:clamp(24px,6vw,36px);}
+  .hero::before{ background-position:var(--hero-x) var(--hero-y); }
+  .grid{ grid-template-columns:1fr; }
+  .header nav{ display:none; }
+  .title{ font-size:clamp(24px,6vw,36px); }
 }
