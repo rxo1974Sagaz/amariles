@@ -84,7 +84,7 @@ a:hover{text-decoration:underline}
   padding:28px;
 }
 .title{
-  color:#000;                 /* preto no hero */
+  color:#fff;                 /* antes: #000 — agora branco puro */
   font-size:clamp(28px,5vw,44px);
   margin:0 0 12px;
   font-weight:800;
