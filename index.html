@@ -27,6 +27,7 @@
         <a href="#certificacoes">Certificações</a>
         <a href="#servicos">Serviços</a>
         <a href="#contato">Contato</a>
+        <a href="#jogo">Jogo</a>
       </nav>
     </header>
 
@@ -183,6 +184,24 @@
           </div>
         </div>
       </section>
+      <!-- JOGO -->
+      <section id="jogo" class="section">
+        <h2 class="h1">River Ride (mini game)</h2>
+        <p class="muted">Use <strong>← →</strong> ou <strong>A D</strong> para desviar dos troncos. No celular, use os botões.</p>
+        <div class="river-game card">
+          <canvas id="river-canvas" width="360" height="600" aria-label="Jogo River Ride"></canvas>
+          <div class="game-hud">
+            <span>Pontuação: <strong id="score">0</strong></span>
+            <span>Melhor: <strong id="best-score">0</strong></span>
+            <button id="restart-game" type="button">Reiniciar</button>
+          </div>
+          <div class="touch-controls" aria-hidden="true">
+            <button id="move-left" type="button">◀ Esquerda</button>
+            <button id="move-right" type="button">Direita ▶</button>
+          </div>
+        </div>
+      </section>
+
     </main>
 
     <!-- =========================== Rodapé =========================== -->
@@ -191,5 +210,6 @@
         <small>© 2025 Amariles. Todos os direitos reservados.</small>
       </div>
     </footer>
+    <script src="river-ride.js"></script>
   </body>
 </html>
