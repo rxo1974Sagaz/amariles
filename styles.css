@@ -225,3 +225,51 @@ footer {
     font-size: clamp(26px, 7vw, 38px);
   }
 }
+
+/* =========================== River Ride =========================== */
+.river-game {
+  display: grid;
+  gap: 12px;
+}
+
+#river-canvas {
+  width: min(100%, 360px);
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid #223248;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+  touch-action: none;
+}
+
+.game-hud {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+}
+
+.game-hud button,
+.touch-controls button {
+  background: #1f2937;
+  color: #e5e7eb;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.game-hud button:hover,
+.touch-controls button:hover {
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.touch-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
